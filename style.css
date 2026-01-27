@@ -383,7 +383,7 @@ button:hover {
 }
 
 .demo-table th:first-child {
-  width: 32%;
+  width: 22%;
 }
 
 .demo-table th:not(:first-child),
@@ -393,7 +393,7 @@ button:hover {
 
 .demo-table th:first-child,
 .demo-table td:first-child {
-  min-width: 360px;
+  min-width: 220px;
 }
 
 .demo-table td {
@@ -405,9 +405,34 @@ button:hover {
   box-shadow: 0 10px 24px rgba(11, 27, 43, 0.04);
 }
 
-.sample-cell {
+.sample-context-row td {
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.context-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
+}
+
+.context-grid .meta-block {
+  height: 100%;
+}
+
+.context-grid .meta-block:nth-child(odd) {
+  background: #fffdf7;
+}
+
+.sample-cell {
+  vertical-align: top;
+}
+
+.sample-cell .meta-block + .meta-block {
+  margin-top: 12px;
 }
 
 .meta-block {
@@ -468,9 +493,12 @@ button:hover {
   color: var(--ink);
 }
 
-.method-cell {
-  display: grid;
-  gap: 8px;
+.history-cell .meta-block {
+  background: var(--surface);
+}
+
+.method-cell > * + * {
+  margin-top: 8px;
 }
 
 .method-badge {
@@ -800,12 +828,17 @@ button:hover {
 }
 
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal.reveal-ready {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.is-visible {
+.reveal.reveal-ready.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -862,7 +895,7 @@ button:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal.reveal-ready {
     transition: none;
   }
 

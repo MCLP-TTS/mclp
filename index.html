@@ -8,7 +8,7 @@
   <meta name="description" content="MCLP: A demo page for expressive role-play TTS with audio history tables." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&amp;family=Sora:wght@300;400;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -31,6 +31,27 @@
         <div class="hero-text">
           <h1>Evaluating and Rewarding LALMs for Expressive Role-Play TTS via Mean Continuation Log-Probability</h1>
           <p class="authors">Anonymous Authors</p>
+        </div>
+        <!-- <div class="hero-visual">
+          <div class="metric-card">
+            <div class="metric-title">RP-TTS Reward</div>
+            <div class="metric-value">+4.6</div>
+            <div class="metric-bar"><span></span></div>
+            <div class="metric-note">Mean Continuation Log-Probability gains when optimizing with MCLP.</div>
+          </div>
+          <div class="stacked">
+            <div class="stack-card">
+              <div class="tag">Evaluation</div>
+              <p>MCLP scores style consistency between generated and ground-truth speech via reverse continuation.</p>
+            </div>
+            <div class="stack-card">
+              <div class="tag">Reward Model</div>
+              <p>Directly optimizes LALMs for expressive role-play by aligning with scene and persona descriptors.</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </header>
 
     <section class="section reveal" id="abstract">
       <div class="section-header">
@@ -54,10 +75,10 @@
       </div>
     </section>
 
-    <section class="section reveal" id="demo">
+    <section class="section" id="demo">
 
       <div class="table-block">
-        <div class="table-scroll" id="table-history"><table class="demo-table"><thead><tr><th>样本信息 / Context</th><th>GT</th><th>GPT-vq09</th><th>StepAudio2</th><th>MiMoAudio-vq09</th><th>Proposed (MCLP)</th></tr></thead><tbody>
+        <div class="table-scroll" id="table-history"><table class="demo-table"><thead><tr><th>历史音频 / Audio History</th><th>GT</th><th>GPT-Audio</th><th>StepAudio2</th><th>MiMoAudio</th><th>Proposed (MCLP)</th></tr></thead><tbody>
 <tr>
     <td class="sample-cell">
       <div class="meta-block">
@@ -96,7 +117,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000021023_sOWkTFC8Sg4+Global_48-Scene_32-Local_1+Global_48-Scene_32-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000021023_sOWkTFC8Sg4+Global_48-Scene_32-Local_1+Global_48-Scene_32-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -104,7 +125,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000021023_sOWkTFC8Sg4+Global_48-Scene_32-Local_1+Global_48-Scene_32-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000021023_sOWkTFC8Sg4+Global_48-Scene_32-Local_1+Global_48-Scene_32-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -162,7 +183,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000001894_3xlwYtyD84Y+Global_8-Scene_8-Local_0+Global_8-Scene_8-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000001894_3xlwYtyD84Y+Global_8-Scene_8-Local_0+Global_8-Scene_8-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -170,7 +191,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000001894_3xlwYtyD84Y+Global_8-Scene_8-Local_0+Global_8-Scene_8-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000001894_3xlwYtyD84Y+Global_8-Scene_8-Local_0+Global_8-Scene_8-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -228,7 +249,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -236,7 +257,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -282,7 +303,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000001217_2EvIXYbIeNA+Global_3-Scene_2-Local_1+Global_3-Scene_2-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000001217_2EvIXYbIeNA+Global_3-Scene_2-Local_1+Global_3-Scene_2-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -290,7 +311,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000001217_2EvIXYbIeNA+Global_3-Scene_2-Local_1+Global_3-Scene_2-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000001217_2EvIXYbIeNA+Global_3-Scene_2-Local_1+Global_3-Scene_2-Local_1-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -336,7 +357,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000002007_4EjzRXbk8OI+Global_59-Scene_45-Local_0+Global_59-Scene_45-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000002007_4EjzRXbk8OI+Global_59-Scene_45-Local_0+Global_59-Scene_45-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -344,7 +365,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000002007_4EjzRXbk8OI+Global_59-Scene_45-Local_0+Global_59-Scene_45-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000002007_4EjzRXbk8OI+Global_59-Scene_45-Local_0+Global_59-Scene_45-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -394,7 +415,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000003345_7s26ivBg_p4+Global_76-Scene_60-Local_0+Global_76-Scene_60-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000003345_7s26ivBg_p4+Global_76-Scene_60-Local_0+Global_76-Scene_60-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -402,7 +423,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000003345_7s26ivBg_p4+Global_76-Scene_60-Local_0+Global_76-Scene_60-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000003345_7s26ivBg_p4+Global_76-Scene_60-Local_0+Global_76-Scene_60-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -452,7 +473,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000003573_8TGP_UrB24Q+Global_6-Scene_5-Local_0+Global_6-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000003573_8TGP_UrB24Q+Global_6-Scene_5-Local_0+Global_6-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -460,7 +481,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000003573_8TGP_UrB24Q+Global_6-Scene_5-Local_0+Global_6-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000003573_8TGP_UrB24Q+Global_6-Scene_5-Local_0+Global_6-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -510,7 +531,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000004824_BrmHIy7jaUI+Global_10-Scene_7-Local_0+Global_10-Scene_7-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000004824_BrmHIy7jaUI+Global_10-Scene_7-Local_0+Global_10-Scene_7-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -518,7 +539,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000004824_BrmHIy7jaUI+Global_10-Scene_7-Local_0+Global_10-Scene_7-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000004824_BrmHIy7jaUI+Global_10-Scene_7-Local_0+Global_10-Scene_7-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -564,7 +585,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000004824_BrmHIy7jaUI+Global_25-Scene_16-Local_3+Global_25-Scene_16-Local_3-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000004824_BrmHIy7jaUI+Global_25-Scene_16-Local_3+Global_25-Scene_16-Local_3-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -572,7 +593,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000004824_BrmHIy7jaUI+Global_25-Scene_16-Local_3+Global_25-Scene_16-Local_3-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000004824_BrmHIy7jaUI+Global_25-Scene_16-Local_3+Global_25-Scene_16-Local_3-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -618,7 +639,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000006176_FVwH6E0-jlg+Global_67-Scene_29-Local_6+Global_67-Scene_29-Local_6-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000006176_FVwH6E0-jlg+Global_67-Scene_29-Local_6+Global_67-Scene_29-Local_6-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -626,7 +647,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000006176_FVwH6E0-jlg+Global_67-Scene_29-Local_6+Global_67-Scene_29-Local_6-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000006176_FVwH6E0-jlg+Global_67-Scene_29-Local_6+Global_67-Scene_29-Local_6-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -676,7 +697,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000006409_GDiqOpkaxys+Global_60-Scene_46-Local_1+Global_60-Scene_46-Local_1-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000006409_GDiqOpkaxys+Global_60-Scene_46-Local_1+Global_60-Scene_46-Local_1-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -684,7 +705,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000006409_GDiqOpkaxys+Global_60-Scene_46-Local_1+Global_60-Scene_46-Local_1-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000006409_GDiqOpkaxys+Global_60-Scene_46-Local_1+Global_60-Scene_46-Local_1-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -734,7 +755,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000007215_II5DAT4-Jxg+Global_5-Scene_5-Local_0+Global_5-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000007215_II5DAT4-Jxg+Global_5-Scene_5-Local_0+Global_5-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -742,7 +763,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000007215_II5DAT4-Jxg+Global_5-Scene_5-Local_0+Global_5-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000007215_II5DAT4-Jxg+Global_5-Scene_5-Local_0+Global_5-Scene_5-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -788,7 +809,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000010185_QDxea_aYkiQ+Global_42-Scene_19-Local_2+Global_42-Scene_19-Local_2-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000010185_QDxea_aYkiQ+Global_42-Scene_19-Local_2+Global_42-Scene_19-Local_2-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -796,7 +817,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000010185_QDxea_aYkiQ+Global_42-Scene_19-Local_2+Global_42-Scene_19-Local_2-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000010185_QDxea_aYkiQ+Global_42-Scene_19-Local_2+Global_42-Scene_19-Local_2-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -846,7 +867,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000010334_QbxGxRzKcDQ+Global_72-Scene_47-Local_0+Global_72-Scene_47-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000010334_QbxGxRzKcDQ+Global_72-Scene_47-Local_0+Global_72-Scene_47-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -854,7 +875,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000010334_QbxGxRzKcDQ+Global_72-Scene_47-Local_0+Global_72-Scene_47-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000010334_QbxGxRzKcDQ+Global_72-Scene_47-Local_0+Global_72-Scene_47-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -916,7 +937,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000010786_RsUN5FH610Q+Global_52-Scene_43-Local_0+Global_52-Scene_43-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000010786_RsUN5FH610Q+Global_52-Scene_43-Local_0+Global_52-Scene_43-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -924,7 +945,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000010786_RsUN5FH610Q+Global_52-Scene_43-Local_0+Global_52-Scene_43-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000010786_RsUN5FH610Q+Global_52-Scene_43-Local_0+Global_52-Scene_43-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -978,7 +999,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000010786_RsUN5FH610Q+Global_67-Scene_56-Local_1+Global_67-Scene_56-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000010786_RsUN5FH610Q+Global_67-Scene_56-Local_1+Global_67-Scene_56-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -986,7 +1007,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000010786_RsUN5FH610Q+Global_67-Scene_56-Local_1+Global_67-Scene_56-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000010786_RsUN5FH610Q+Global_67-Scene_56-Local_1+Global_67-Scene_56-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1036,7 +1057,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000012961_XSs18YbtvCY+Global_49-Scene_37-Local_1+Global_49-Scene_37-Local_1-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000012961_XSs18YbtvCY+Global_49-Scene_37-Local_1+Global_49-Scene_37-Local_1-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1044,7 +1065,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000012961_XSs18YbtvCY+Global_49-Scene_37-Local_1+Global_49-Scene_37-Local_1-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000012961_XSs18YbtvCY+Global_49-Scene_37-Local_1+Global_49-Scene_37-Local_1-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1098,7 +1119,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000013719_Zh7MpwSRQew+Global_1-Scene_0-Local_1+Global_1-Scene_0-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000013719_Zh7MpwSRQew+Global_1-Scene_0-Local_1+Global_1-Scene_0-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1106,7 +1127,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000013719_Zh7MpwSRQew+Global_1-Scene_0-Local_1+Global_1-Scene_0-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000013719_Zh7MpwSRQew+Global_1-Scene_0-Local_1+Global_1-Scene_0-Local_1-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1152,7 +1173,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000017171_i-3sPPTMXXU+Global_9-Scene_6-Local_0+Global_9-Scene_6-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000017171_i-3sPPTMXXU+Global_9-Scene_6-Local_0+Global_9-Scene_6-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1160,7 +1181,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000017171_i-3sPPTMXXU+Global_9-Scene_6-Local_0+Global_9-Scene_6-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000017171_i-3sPPTMXXU+Global_9-Scene_6-Local_0+Global_9-Scene_6-Local_0-Sentence_1.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1210,7 +1231,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000018104_kYZ08nMCaSk+Global_29-Scene_17-Local_0+Global_29-Scene_17-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000018104_kYZ08nMCaSk+Global_29-Scene_17-Local_0+Global_29-Scene_17-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1218,7 +1239,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000018104_kYZ08nMCaSk+Global_29-Scene_17-Local_0+Global_29-Scene_17-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000018104_kYZ08nMCaSk+Global_29-Scene_17-Local_0+Global_29-Scene_17-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1272,7 +1293,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1280,7 +1301,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1326,7 +1347,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GT/Y0000022357_vui0PFDOyCI+Global_59-Scene_42-Local_0+Global_59-Scene_42-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/GPT_vq09prompt/Y0000022357_vui0PFDOyCI+Global_59-Scene_42-Local_0+Global_59-Scene_42-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1334,7 +1355,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/StepAudio2/Y0000022357_vui0PFDOyCI+Global_59-Scene_42-Local_0+Global_59-Scene_42-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_Sub/MiMoAudio_vq09prompt/Y0000022357_vui0PFDOyCI+Global_59-Scene_42-Local_0+Global_59-Scene_42-Local_0-Sentence_7.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1347,7 +1368,7 @@
 
       <div class="table-block">
         <div class="table-title">不包含 Audio History 的样本</div>
-        <div class="table-scroll" id="table-no-history"><table class="demo-table"><thead><tr><th>样本信息 / Context</th><th>GT</th><th>GPT-vq09</th><th>StepAudio2</th><th>MiMoAudio-vq09</th><th>Proposed (MCLP)</th></tr></thead><tbody>
+        <div class="table-scroll" id="table-no-history"><table class="demo-table"><thead><tr><th>历史音频 / Audio History</th><th>GT</th><th>GPT-Audio</th><th>StepAudio2</th><th>MiMoAudio</th><th>Proposed (MCLP)</th></tr></thead><tbody>
 <tr>
     <td class="sample-cell">
       <div class="meta-block">
@@ -1381,7 +1402,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000001344_2_Rc9hxeqqA+Global_21-Scene_12-Local_0+Global_21-Scene_12-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000001344_2_Rc9hxeqqA+Global_21-Scene_12-Local_0+Global_21-Scene_12-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1389,7 +1410,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000001344_2_Rc9hxeqqA+Global_21-Scene_12-Local_0+Global_21-Scene_12-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000001344_2_Rc9hxeqqA+Global_21-Scene_12-Local_0+Global_21-Scene_12-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1430,7 +1451,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000002574_5pVUqrbDyS0+Global_33-Scene_24-Local_1+Global_33-Scene_24-Local_1-Sentence_5.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000002574_5pVUqrbDyS0+Global_33-Scene_24-Local_1+Global_33-Scene_24-Local_1-Sentence_5.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1438,7 +1459,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000002574_5pVUqrbDyS0+Global_33-Scene_24-Local_1+Global_33-Scene_24-Local_1-Sentence_5.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000002574_5pVUqrbDyS0+Global_33-Scene_24-Local_1+Global_33-Scene_24-Local_1-Sentence_5.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1483,7 +1504,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000002677_65QDWPmoyco+Global_65-Scene_45-Local_2+Global_65-Scene_45-Local_2-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000002677_65QDWPmoyco+Global_65-Scene_45-Local_2+Global_65-Scene_45-Local_2-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1491,7 +1512,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000002677_65QDWPmoyco+Global_65-Scene_45-Local_2+Global_65-Scene_45-Local_2-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000002677_65QDWPmoyco+Global_65-Scene_45-Local_2+Global_65-Scene_45-Local_2-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1528,7 +1549,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000005265_D-bo_kMWejo+Global_68-Scene_56-Local_0+Global_68-Scene_56-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000005265_D-bo_kMWejo+Global_68-Scene_56-Local_0+Global_68-Scene_56-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1536,7 +1557,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000005265_D-bo_kMWejo+Global_68-Scene_56-Local_0+Global_68-Scene_56-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000005265_D-bo_kMWejo+Global_68-Scene_56-Local_0+Global_68-Scene_56-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1581,7 +1602,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1589,7 +1610,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000008764_MRRZ9_Pgq2w+Global_7-Scene_6-Local_0+Global_7-Scene_6-Local_0-Sentence_4.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1630,7 +1651,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000013026_XdWE1K3zUcs+Global_48-Scene_20-Local_0+Global_48-Scene_20-Local_0-Sentence_8.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000013026_XdWE1K3zUcs+Global_48-Scene_20-Local_0+Global_48-Scene_20-Local_0-Sentence_8.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1638,7 +1659,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000013026_XdWE1K3zUcs+Global_48-Scene_20-Local_0+Global_48-Scene_20-Local_0-Sentence_8.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000013026_XdWE1K3zUcs+Global_48-Scene_20-Local_0+Global_48-Scene_20-Local_0-Sentence_8.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1679,7 +1700,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000016090_f8S1CN7hCVs+Global_32-Scene_25-Local_0+Global_32-Scene_25-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000016090_f8S1CN7hCVs+Global_32-Scene_25-Local_0+Global_32-Scene_25-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1687,7 +1708,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000016090_f8S1CN7hCVs+Global_32-Scene_25-Local_0+Global_32-Scene_25-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000016090_f8S1CN7hCVs+Global_32-Scene_25-Local_0+Global_32-Scene_25-Local_0-Sentence_2.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1728,7 +1749,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000019188_nVAruU8MRA8+Global_44-Scene_21-Local_0+Global_44-Scene_21-Local_0-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000019188_nVAruU8MRA8+Global_44-Scene_21-Local_0+Global_44-Scene_21-Local_0-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1736,7 +1757,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000019188_nVAruU8MRA8+Global_44-Scene_21-Local_0+Global_44-Scene_21-Local_0-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000019188_nVAruU8MRA8+Global_44-Scene_21-Local_0+Global_44-Scene_21-Local_0-Sentence_9.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1777,7 +1798,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000019555_oQslbdC4mvg+Global_40-Scene_26-Local_0+Global_40-Scene_26-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000019555_oQslbdC4mvg+Global_40-Scene_26-Local_0+Global_40-Scene_26-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1785,7 +1806,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000019555_oQslbdC4mvg+Global_40-Scene_26-Local_0+Global_40-Scene_26-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000019555_oQslbdC4mvg+Global_40-Scene_26-Local_0+Global_40-Scene_26-Local_0-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1826,7 +1847,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GT/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">GPT-vq09</div>
+      <div class="method-badge">GPT-Audio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/GPT_vq09prompt/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
@@ -1834,7 +1855,7 @@
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/StepAudio2/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
-      <div class="method-badge">MiMoAudio-vq09</div>
+      <div class="method-badge">MiMoAudio</div>
       <audio class="audio-player" controls preload="none" src="assets/audio/RolePlay_NoAudioHistory_Sub/MiMoAudio_vq09prompt/Y0000021654_u-c6XhMb_Rs+Global_85-Scene_49-Local_2+Global_85-Scene_49-Local_2-Sentence_3.wav"></audio>
     </td>
     <td class="method-cell">
